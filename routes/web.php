@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return "Selamat Datang";
+});
+
+Route::get('/about', function () {
+    return "
+    NIM     : 2041720120
+    Nama    : Maulana Rosandy
+    Kelas   : TI - 2B";
+});
+
+Route::get('/articles/{id}', function ($id) {
+    return "Ini merupakan halaman artikel dengan id " . $id;
 });
